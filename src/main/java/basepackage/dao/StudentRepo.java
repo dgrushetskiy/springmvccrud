@@ -1,6 +1,6 @@
 package basepackage.dao;
 
-import basepackage.entities.Student;
+import basepackage.model.Student;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

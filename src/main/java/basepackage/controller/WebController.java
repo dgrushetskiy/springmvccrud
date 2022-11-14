@@ -1,7 +1,7 @@
 package basepackage.controller;
 
 import basepackage.dao.StudentRepo;
-import basepackage.entities.Student;
+import basepackage.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,12 +19,6 @@ public class WebController {
 
     @Autowired
     private StudentRepo repo;
-
-//    @RequestMapping("/students")
-//    public String  getAllStudents(ModelMap  model){
-//        model.addAttribute( "studentlist", (List<Student>) repo.findAll());
-//        return "students";
-//    }
 
     @RequestMapping(value="/save",method = RequestMethod.POST)
     public String save(@ModelAttribute("student") Student student){
@@ -78,21 +72,4 @@ public class WebController {
         return "home";
     }
 
-//    @RequestMapping("/dummy")
-//    public String displayDummy(ModelMap model) {
-//        model.addAttribute("message", "This page is to provide some information about our company");
-//        return "dummy";
-//    }
-//
-//    @RequestMapping("/about")
-//    public String displayAbout(ModelMap model) {
-//        model.addAttribute("message", "This page is to provide some information about our company");
-//        return "about";
-//    }
-//
-//    @RequestMapping("/help")
-//    public String displayHelp(ModelMap model) {
-//        model.addAttribute("message", "This page is to provide help document");
-//        return "help";
-//    }
 }
